@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  border-top-style: solid;
+text-align:center;
+border-bottom-style: solid;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+  <h1>HEADER</h1>
+
+
+
+<div style="text-align:center">
+  <h2>General Studies</h2>
+</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    HISTORY
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    ECONOMICS
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    GEOGRAPHY
+  </div>
+</div>
+
+
+<div style="text-align:center">
+  <h3>Engish</h3>
+</div>
+
+
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    COMMUNICATION SKILLS
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    VOCABULARY
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+   GRAMMER
+  </div>
+</div>
+
+
+<div style="text-align:center">
+  <h2>Logical Reasoning</h2>
+</div>
+
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    PUZZLE
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    REASONING
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    RELATIONS
+  </div>
+</div>
+
+
+
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>HISTORY</h2>
+  <p>History is the study of some subject in chronological order: tracing ideas back to their origin and studying the evolution of ideas or events.History is most commonly used to study government and politics.</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h3>ECONOMICS</h3>
+  <p>Economics is the social science that studies how people interact with things of value; in particular, the production, distribution, and consumption of goods and services.</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h4>GEOGRAPHY</h4>
+  <p>Geography is the study of places and the relationships between people and their environments. Geographers explore both the physical properties of Earth's surface and the human societies spread across it.</p>
+</div>
+
+
+<div id="b4" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h5>COMMUNICATION SKILL</h5>
+  <p>Communication skills are the abilities you use when giving and receiving different kinds of information. Some examples include communicating new ideas, feelings or even an update on your project. </p>
+</div>
+
+<div id="b5" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h6>VOCABULARY</h6>
+  <p>Vocabulary is the all the language and words either used or understood by a person or group of people. An example of vocabulary is all the words that a toddler understands.</p>
+</div>
+
+<div id="b6" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h7>GRAMMER</h7>
+  <p>Grammar is important because it provides information that helps the reader's comprehension. It is the structure that conveys precise meaning from the writer to the audience.</p>
+</div>
+
+
+<div id="b7" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h8>HISTORY</h8>
+  <p>History is the study of some subject in chronological order: tracing ideas back to their origin and studying the evolution of ideas or events.History is most commonly used to study government and politics.</p>
+</div>
+
+<div id="b8" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h9>ECONOMICS</h9>
+  <p>Economics is the social science that studies how people interact with things of value; in particular, the production, distribution, and consumption of goods and services.</p>
+</div>
+
+<div id="b9" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h10>GEOGRAPHY</h10>
+  <p>Geography is the study of places and the relationships between people and their environments. Geographers explore both the physical properties of Earth's surface and the human societies spread across it.</p>
+</div>
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html> 
